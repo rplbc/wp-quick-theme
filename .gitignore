@@ -1,0 +1,7 @@
+dist/css/**
+dist/js/**
+!.gitkeep
+
+node_modules
+vendor
+yarn-error.log
