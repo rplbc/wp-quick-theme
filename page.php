@@ -1,6 +1,6 @@
 <?php
 /**
- * Main template
+ * Default page template
  *
  * @package Quick
  */
