@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset name="Coding Standards">
+  <file>.</file>
+
+  <arg value="ps" />
+  <arg name="basepath" value="." />
+  <arg name="parallel" value="8" />
+  <arg name="extensions" value="php" />
+
+  <exclude-pattern>/vendor/*</exclude-pattern>
+  <exclude-pattern>/node_modules/*</exclude-pattern>
+
+  <rule ref="WordPress">
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
+    <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+    <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
+  </rule>
+
+  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="4" />
+      <property name="tabIndent" value="false" />
+    </properties>
+  </rule>
+</ruleset>
