@@ -9,7 +9,7 @@
 
 </main>
 
-<footer class="footer"></footer>
+<footer class="site-footer"></footer>
 
 <?php wp_footer(); ?>
 

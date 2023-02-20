@@ -21,6 +21,19 @@
 
     <a href="#main" class="skip-to-content"><?php esc_html_e( 'Skip to content', 'quick' ); ?></a>
 
-    <header class="header"></header>
+    <header class="site-header">
+    <?php
+    wp_nav_menu(
+        [
+            'container'       => 'nav',
+            'container_class' => 'site-header-nav',
+            'depth'           => 1,
+            'fallback_cb'     => false,
+            'items_wrap'      => '<ul>%3$s</ul>',
+            'theme_location'  => 'primary_menu',
+        ]
+    );
+    ?>
+    </header>
 
     <main id="main">

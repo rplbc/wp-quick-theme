@@ -1,0 +1,24 @@
+.site-header {
+  position: fixed;
+  z-index: var(--z-index-header);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(#fff, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+.site-header-nav {
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  [aria-current] {
+    font-weight: var(--text-font-weight-bold);
+  }
+}
