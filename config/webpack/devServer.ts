@@ -1,6 +1,6 @@
-import { type Configuration } from 'webpack'
+import { type WebpackOptionsNormalized } from 'webpack'
 
-export const devServerConfig: Pick<Configuration, 'devServer'> = {
+export const devServerConfig: Pick<WebpackOptionsNormalized, 'devServer'> = {
   devServer: {
     port: 3003,
     hot: true,
