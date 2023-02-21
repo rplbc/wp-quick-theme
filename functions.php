@@ -15,3 +15,5 @@ require get_template_directory() . '/inc/setup.php';
 if ( defined( 'QUICK_SERVE' ) ) {
     require get_template_directory() . '/inc/dev-setup.php';
 }
+
+require get_template_directory() . '/inc/options-page.php';
