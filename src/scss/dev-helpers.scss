@@ -1,0 +1,10 @@
+.acf-preview {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  inset: 0;
+  height: 100vh;
+  overflow: auto;
+  padding: 1rem;
+  background-color: #fff;
+}

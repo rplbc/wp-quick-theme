@@ -21,5 +21,17 @@ add_action(
 
         wp_enqueue_script( 'scripts-dev', 'http://localhost:3003/js/main.js', [], null, true );
         wp_enqueue_script( 'styles-dev', 'http://localhost:3003/js/styles.js', [], null, true );
+        wp_enqueue_script( 'helpers-dev', 'http://localhost:3003/js/dev-helpers.js', [], null, true );
+    }
+);
+
+add_action(
+    'wp_footer',
+    function() {
+        echo '
+<div class="acf-preview">
+    <pre>' . esc_html( wp_json_encode( get_fields(), JSON_PRETTY_PRINT ) ) . '</pre>
+    <pre>' . esc_html( wp_json_encode( get_fields( 'quick_options' ), JSON_PRETTY_PRINT ) ) . '</pre>
+</div>';
     }
 );

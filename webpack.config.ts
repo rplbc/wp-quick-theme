@@ -11,10 +11,16 @@ const config = (env: any): Configuration => {
   return {
     entry: {
       main: './src/ts/main.ts',
-      styles: isDevServer ? './src/ts/styles.ts' : './src/scss/main.scss',
-      'editor-styles': isDevServer
-        ? './src/ts/editor-dev.ts'
-        : './src/scss/editor.scss',
+      ...(isDevServer
+        ? {
+            styles: './src/ts/styles.ts',
+            'editor-styles': './src/ts/editor-dev.ts',
+            'dev-helpers': './src/ts/dev-helpers/index.ts'
+          }
+        : {
+            styles: './src/scss/main.scss',
+            'editor-styles': './src/scss/editor.scss',
+          }),
     },
     mode: isDevServer ? 'development' : 'production',
     devtool: clean ? false : isDevServer ? 'eval' : 'source-map',
