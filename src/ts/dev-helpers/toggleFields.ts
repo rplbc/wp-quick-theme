@@ -1,4 +1,4 @@
-import { hideScrollbar, resetScroll, isVisible } from '../helpers'
+import { hideScroll, resetScroll, isVisible } from '../helpers'
 
 export const addACFHelper = (target = '.acf-preview') => {
   const wrapper = document.querySelector<HTMLDivElement>(target)
@@ -11,7 +11,7 @@ export const addACFHelper = (target = '.acf-preview') => {
       resetScroll()
     } else {
       wrapper.style.display = 'block'
-      hideScrollbar()
+      hideScroll()
     }
   }
 

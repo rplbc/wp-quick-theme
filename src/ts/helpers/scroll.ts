@@ -1,4 +1,4 @@
-export const hideScrollbar = (hiddenClass = 'overflow-hidden') => {
+export const hideScroll = (hiddenClass = 'overflow-hidden') => {
   document.documentElement.style.overflow = 'hidden'
   document.body.classList.add(hiddenClass)
 }
