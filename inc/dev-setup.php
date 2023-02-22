@@ -19,9 +19,9 @@ add_action(
         wp_dequeue_script( 'scripts' );
         wp_dequeue_style( 'styles' );
 
+        // Keep the order or webpack fails.
         wp_enqueue_script( 'scripts-dev', 'http://localhost:3003/js/main.js', [], null, true );
-        wp_enqueue_script( 'styles-dev', 'http://localhost:3003/js/styles.js', [], null, true );
-        wp_enqueue_script( 'helpers-dev', 'http://localhost:3003/js/dev-helpers.js', [], null, true );
+        wp_enqueue_script( 'dev', 'http://localhost:3003/js/dev.js', [], null, true );
     }
 );
 

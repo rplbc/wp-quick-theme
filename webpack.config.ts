@@ -13,9 +13,8 @@ const config = (env: any): Configuration => {
       main: './src/ts/main.ts',
       ...(isDevServer
         ? {
-            styles: './src/ts/styles.ts',
+            dev: './src/ts/dev.ts',
             'editor-styles': './src/ts/editor-dev.ts',
-            'dev-helpers': './src/ts/dev-helpers/index.ts'
           }
         : {
             styles: './src/scss/main.scss',
