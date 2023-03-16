@@ -31,6 +31,13 @@ export const moduleConfig = (
           'sass-loader',
         ],
       },
+      {
+        test: /\.(woff(2)?|ttf|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: './fonts/[name][ext]',
+        },
+      },
     ],
   },
 })
