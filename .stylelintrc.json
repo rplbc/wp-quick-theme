@@ -4,6 +4,7 @@
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
   "rules": {
-    "no-empty-source": null
+    "no-empty-source": null,
+    "custom-property-pattern": null
   }
 }

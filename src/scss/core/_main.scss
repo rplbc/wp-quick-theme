@@ -9,7 +9,7 @@
   height: 1px;
   overflow: hidden;
   position: absolute;
-  z-index: var(--z-index-skip-to-content, 9999999);
+  z-index: var(--zIndex-skip-to-content, 9999999);
   top: 1rem;
   left: 1rem;
   padding: 1rem;

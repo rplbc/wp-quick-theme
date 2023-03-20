@@ -32,8 +32,8 @@ export const moduleConfig = (
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|svg)$/,
-        type: 'asset/resource',
+        test: /\.(woff|woff2)$/,
+        type: 'asset',
         generator: {
           filename: './fonts/[name][ext]',
         },

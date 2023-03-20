@@ -1,6 +1,6 @@
 .site-header {
   position: fixed;
-  z-index: var(--z-index-header);
+  z-index: var(--zIndex-header);
   left: 0;
   top: 0;
   width: 100%;
@@ -19,6 +19,6 @@
   }
 
   [aria-current] {
-    font-weight: var(--text-font-weight-bold);
+    font-weight: var(--fontWeight-text-bold);
   }
 }

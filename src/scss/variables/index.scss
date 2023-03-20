@@ -1,19 +1,28 @@
 :root {
-  --base-font-size: 14px;
+  // fontFamily
+  --fontFamily-regular: 'Inter', sans-serif;
 
-  --text-font-weight-normal: 400;
-  --text-font-weight-bold: 700;
-  --heading-font-weight: 700;
+  // fontSize
+  --fontSize-base: 14px;
 
-  --line-height-text: 1.5;
-  --line-height-heading: 1.2;
+  // fontWeight
+  --fontWeight-text-normal: 400;
+  --fontWeight-text-bold: 700;
+  --fontWeight-heading-bold: 700;
 
-  --header-height: 100px;
+  // lineHeight
+  --lineHeight-text: 1.5;
+  --lineHeight-heading: 1.2;
 
-  --z-index-header: 99;
-  --z-index-skip-to-content: 9999999;
+  // zIndex
+  --zIndex-header: 99;
+  --zIndex-skip-to-content: 9999999;
 
+  // colors
   --color-text: #202020;
   --color-heading: #1e1e1e;
   --color-link: #004f9a;
+
+  // others
+  --header-height: 100px;
 }

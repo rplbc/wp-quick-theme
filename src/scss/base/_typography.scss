@@ -4,9 +4,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--heading-font-weight, var(--text-font-weight-bold));
+  font-weight: var(--fontWeight-heading-bold, var(--fontWeight-text-bold));
   color: var(--color-heading, var(--color-text));
-  line-height: var(--line-height-text, var(--line-height-heading));
+  line-height: var(--lineHeight-text, var(--lineHeight-heading));
 }
 
 h1,
