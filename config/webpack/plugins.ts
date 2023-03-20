@@ -1,6 +1,7 @@
 import ESLintPlugin from 'eslint-webpack-plugin'
 import FileManagerPlugin from 'filemanager-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import StylelintPlugin from 'stylelint-webpack-plugin'
 import { type Configuration } from 'webpack'
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
 
@@ -57,6 +58,7 @@ export const pluginsConfig = (
       new ESLintPlugin({
         extensions: ['ts'],
       }),
+      new StylelintPlugin(),
     ],
   }
 }

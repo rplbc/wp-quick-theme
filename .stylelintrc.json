@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "reportDescriptionlessDisables": true,
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
+  "rules": {
+    "no-empty-source": null
+  }
+}

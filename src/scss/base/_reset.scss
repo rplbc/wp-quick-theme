@@ -21,7 +21,7 @@ body {
   font-size: var(--base-font-size);
   font-weight: var(--text-font-weight-normal);
   line-height: var(--line-height-text);
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
 }
 
 body,
@@ -68,7 +68,7 @@ select {
 }
 
 :where(svg:not([fill])) {
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 ::selection {
