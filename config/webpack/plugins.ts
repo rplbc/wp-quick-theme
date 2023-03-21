@@ -49,7 +49,11 @@ export const pluginsConfig = (
           filename: 'css/[name].css',
         }),
       ]
-    : []
+    : [
+        new MiniCssExtractPlugin({
+          filename: 'css/[name].css',
+        }),
+      ]
 
   return {
     plugins: [

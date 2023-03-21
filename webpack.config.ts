@@ -17,8 +17,8 @@ const config = (env: any): Configuration => {
           }
         : {
             styles: './src/scss/main.scss',
-            'editor-styles': './src/scss/editor.scss',
           }),
+      'editor-styles': './src/scss/editor.scss',
     },
     mode: isDevServer ? 'development' : 'production',
     devtool: clean ? false : isDevServer ? 'eval' : 'source-map',

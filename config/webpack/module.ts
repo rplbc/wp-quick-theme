@@ -22,7 +22,12 @@ export const moduleConfig = (
         exclude: /(node_modules|bower_components)/,
       },
       {
-        test: /\.scss$/,
+        test: /(editor)\.scss$/,
+        exclude: /node_modules/,
+        use: [miniCSSLoader, 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+      {
+        test: /(?<!editor)\.scss$/,
         exclude: /node_modules/,
         use: [
           isDevServer ? 'style-loader' : miniCSSLoader,
