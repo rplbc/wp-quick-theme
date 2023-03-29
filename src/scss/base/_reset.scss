@@ -6,7 +6,7 @@
 
 html {
   font-size: var(--fontSize-base);
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: var(--headerHeight);
 
   &:focus-within {
     scroll-behavior: smooth;
@@ -45,7 +45,7 @@ ol {
 }
 
 a {
-  color: var(--color-link, currentColor);
+  color: currentcolor;
   text-decoration: none;
 }
 
@@ -68,9 +68,4 @@ select {
 
 :where(svg:not([fill])) {
   fill: currentcolor;
-}
-
-::selection {
-  background-color: #000;
-  color: #fff;
 }
