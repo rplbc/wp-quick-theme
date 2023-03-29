@@ -1,0 +1,25 @@
+.socials {
+  gap: 2rem;
+}
+
+.socials-label {
+  font-weight: var(--fontWeight-text-bold);
+}
+
+.socials-list {
+  gap: 1rem;
+}
+
+.socials-list-item {
+  a {
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
+.socials,
+.socials-list {
+  display: flex;
+  align-items: center;
+}
