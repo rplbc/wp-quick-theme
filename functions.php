@@ -2,6 +2,8 @@
 /**
  * Functions and definitions
  *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/#what-is-functions-php
+ *
  * @package Quick
  */
 
