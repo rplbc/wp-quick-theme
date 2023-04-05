@@ -1,7 +1,6 @@
 dist
-!.gitkeep
-
 node_modules
 vendor
 yarn-error.log
 .vscode
+.quick

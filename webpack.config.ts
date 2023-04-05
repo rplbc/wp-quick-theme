@@ -1,42 +1,43 @@
 import path from 'path'
-import { type Configuration } from 'webpack'
+import type { Configuration } from 'webpack'
 import 'webpack-dev-server'
-import { devServerConfig, moduleConfig, pluginsConfig } from './config'
+import * as cfg from './webpack'
 
-const cleanCopyPath = path.join(__dirname, '../quick-clean')
+const BUILD_DIR = 'dist'
+const EXPORT_DIR = '.quick'
+const DEVSERVER_PORT = 3003
 
-const config = (env: any): Configuration => {
-  const { WEBPACK_SERVE: isDevServer, clean } = env || {}
+const webpackConfig: WebpackConfig = (env) => {
+  const { WEBPACK_WATCH, WEBPACK_SERVE, WEBPACK_BUILD } = env || {}
 
   return {
-    entry: {
-      main: './src/ts/main.ts',
-      ...(isDevServer
-        ? {
-            dev: './src/ts/dev.ts',
-          }
-        : {
-            styles: './src/scss/main.scss',
-          }),
-      'editor-styles': './src/scss/editor.scss',
+    entry: cfg.entry(WEBPACK_SERVE),
+    output: {
+      filename: 'js/[name].js',
+      path: path.join(__dirname, BUILD_DIR),
+      clean: true,
     },
-    mode: isDevServer ? 'development' : 'production',
-    devtool: clean ? false : isDevServer ? 'eval' : 'source-map',
+    resolve: {
+      extensions: ['.ts', '...'],
+    },
+    mode: WEBPACK_SERVE || WEBPACK_WATCH ? 'development' : 'production',
+    devtool: WEBPACK_SERVE || WEBPACK_WATCH ? false : 'source-map',
+    devServer: cfg.devServer(DEVSERVER_PORT),
+    module: cfg.modules(WEBPACK_SERVE),
+    plugins: cfg.plugins(
+      WEBPACK_SERVE,
+      WEBPACK_BUILD ? path.join(__dirname, EXPORT_DIR) : undefined
+    ),
     cache: {
       type: 'filesystem',
     },
-    resolve: {
-      extensions: ['.ts', '.js'],
-    },
-    output: {
-      filename: 'js/[name].js',
-      path: path.resolve(__dirname, 'dist'),
-      clean: true,
-    },
-    ...devServerConfig,
-    ...moduleConfig(isDevServer),
-    ...pluginsConfig(isDevServer, clean, cleanCopyPath),
   }
 }
 
-export default config
+type WebpackConfig = (env: {
+  WEBPACK_WATCH?: true
+  WEBPACK_SERVE?: true
+  WEBPACK_BUILD?: true
+}) => Configuration
+
+export default webpackConfig
