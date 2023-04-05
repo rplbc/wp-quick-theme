@@ -2,6 +2,8 @@
 /**
  * The header
  *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+ *
  * @package Quick
  */
 
