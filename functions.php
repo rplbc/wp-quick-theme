@@ -21,3 +21,7 @@ if ( defined( 'QUICK_SERVE' ) ) {
 }
 
 require get_template_directory() . '/inc/options-page.php';
+
+require get_template_directory() . '/inc/editor/blocks.php';
+
+require get_template_directory() . '/inc/editor/wysiwyg.php';
