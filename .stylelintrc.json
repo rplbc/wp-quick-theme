@@ -5,6 +5,8 @@
   "reportNeedlessDisables": true,
   "rules": {
     "no-empty-source": null,
-    "custom-property-pattern": null
+    "custom-property-pattern": null,
+    "no-invalid-position-at-import-rule": null,
+    "no-descending-specificity": null
   }
 }
