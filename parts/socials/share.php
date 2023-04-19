@@ -22,10 +22,10 @@ $args = wp_parse_args(
     <p class="socials-label"><?php echo esc_html( $args['label'] ); ?></p>
     <ul class="socials-list">
         <?php
-        foreach ( $args['sharers'] as $sharer => $sharer_url ) :
+        foreach ( $args['sharers'] as $sharer => $sharerUrl ) :
             ?>
             <li class="socials-list-item">
-                <?php get_template_part( "parts/socials/links/{$sharer}", false, [ 'url' => $sharer_url . $args['url'] ] ); ?>
+                <?php get_template_part( "parts/socials/links/{$sharer}", false, [ 'url' => $sharerUrl . $args['url'] ] ); ?>
             </li>
             <?php
         endforeach;

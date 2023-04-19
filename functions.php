@@ -7,8 +7,6 @@
  * @package Quick
  */
 
-defined( 'QUICK_VERSION' ) || define( 'QUICK_VERSION', 1.0 );
-
 // Define only in dev mode.
 define( 'QUICK_SERVE', true );
 

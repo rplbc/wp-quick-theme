@@ -31,11 +31,13 @@ add_action(
 add_action(
     'wp_enqueue_scripts',
     function () {
+        $themeVersion = wp_get_theme()->get( 'Version' );
+
         wp_deregister_style( 'wp-block-library' );
         wp_dequeue_style( 'global-styles' );
         wp_dequeue_style( 'classic-theme-styles' );
 
-        wp_enqueue_script( 'quick-scripts', get_template_directory_uri() . '/dist/js/main.js', [], QUICK_VERSION, true );
-        wp_enqueue_style( 'quick-styles', get_template_directory_uri() . '/dist/css/styles.css', [], QUICK_VERSION );
+        wp_enqueue_script( 'quick-scripts', get_template_directory_uri() . '/dist/js/main.js', [], $themeVersion, true );
+        wp_enqueue_style( 'quick-styles', get_template_directory_uri() . '/dist/css/styles.css', [], $themeVersion );
     }
 );
