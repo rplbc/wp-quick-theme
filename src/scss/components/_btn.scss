@@ -1,0 +1,31 @@
+@use 'sass:color';
+
+.btn {
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: var(--fontWeight-text-bold);
+  padding: 1em 2em;
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--btn-bg, #0070f3);
+  transition: 200ms background-color ease;
+
+  &:hover {
+    background-color: var(
+      --btn-bg-active,
+      color.adjust(#0070f3, $lightness: 10%)
+    );
+  }
+
+  &:active {
+    transition-duration: 50ms;
+    background-color: var(
+      --btn-bg-active,
+      color.adjust(#0070f3, $lightness: -10%)
+    );
+  }
+
+  &:focus-visible {
+    outline: 2px solid color.adjust(#0070f3, $lightness: 20%);
+  }
+}

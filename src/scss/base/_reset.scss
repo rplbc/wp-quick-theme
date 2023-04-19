@@ -19,7 +19,7 @@ body {
   font-family: var(--fontFamily-regular);
   font-size: var(--fontSize-base);
   font-weight: var(--fontWeight-text-normal);
-  line-height: var(--line-height-text);
+  line-height: var(--lineHeight-text);
   text-rendering: optimizespeed;
 }
 
@@ -55,7 +55,10 @@ strong {
 
 img,
 picture {
+  width: auto;
+  height: auto;
   max-width: 100%;
+  max-height: 100%;
   display: block;
 }
 
