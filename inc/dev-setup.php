@@ -23,16 +23,45 @@ add_action(
 );
 
 /**
- * Adds modal with ACF fields
+ * Adds modal with ACF
  */
 add_action(
     'wp_footer',
     function() { ?>
 
-    <div class="acf-preview">
-        <div class="acf-preview-content">
+    <div class="dev-acf-preview">
+        <div class="dev-acf-preview-content">
             <?php pre_json( get_fields() ); ?>
             <?php pre_json( get_fields( 'quick_options' ) ); ?>
+        </div>
+    </div>
+
+        <?php
+    }
+);
+
+/**
+ * Adds floating grid helper
+ */
+add_action(
+    'wp_footer',
+    function() {
+        ?>
+
+    <div class="dev-floating-grid">
+        <div class="grid inner">
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
+            <div class="dev-floating-grid-col"></div>
         </div>
     </div>
 

@@ -1,5 +1,9 @@
-.acf-preview {
+.dev-acf-preview,
+.dev-floating-grid {
   display: none;
+}
+
+.dev-acf-preview {
   position: fixed;
   z-index: 999999;
   inset: 0;
@@ -17,5 +21,33 @@
     font-size: 1.5rem;
     line-height: 1.25;
     letter-spacing: -0.03em;
+  }
+}
+
+.dev-floating-grid {
+  pointer-events: none;
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+
+  > .grid {
+    height: 100vh;
+  }
+
+  &-col {
+    position: relative;
+    border-color: blue;
+    border-width: 0 1px;
+    border-style: dashed;
+
+    &:nth-of-type(n + 2)::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      left: -21px;
+      top: 0;
+      background-color: rgb(0 0 255 / 8%);
+    }
   }
 }

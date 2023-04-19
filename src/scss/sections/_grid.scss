@@ -1,5 +1,5 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--gutter, 20px);
+  column-gap: var(--gutter);
 }
