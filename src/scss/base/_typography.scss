@@ -6,7 +6,7 @@ h5,
 h6 {
   color: var(--color-heading, var(--color-text));
   font-weight: var(--fontWeight-heading-bold, var(--fontWeight-text-bold));
-  line-height: var(--lineHeight-text, var(--lineHeight-heading));
+  line-height: var(--lineHeight-heading, var(--lineHeight-text));
 }
 
 h1,
