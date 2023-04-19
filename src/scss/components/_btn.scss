@@ -9,6 +9,7 @@
   color: #fff;
   background-color: var(--btn-bg, #0070f3);
   transition: 200ms background-color ease;
+  white-space: nowrap;
 
   &:hover {
     background-color: var(

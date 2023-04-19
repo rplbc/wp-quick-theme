@@ -23,18 +23,25 @@
     <?php wp_body_open(); ?>
 
     <header class="site-header">
-        <?php
-        wp_nav_menu(
-            [
-                'container'       => 'nav',
-                'container_class' => 'site-header-nav',
-                'depth'           => 1,
-                'fallback_cb'     => false,
-                'items_wrap'      => '<ul>%3$s</ul>',
-                'theme_location'  => 'primary_menu',
-            ]
-        );
-        ?>
+        <div class="site-header-bar">
+            <div class="inner site-header-inner">
+                <h1 class="site-header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Quick</a></h1>
+                <nav class="site-header-nav">
+                    <?php
+                    wp_nav_menu(
+                        [
+                            'container'      => '',
+                            'depth'          => 1,
+                            'fallback_cb'    => false,
+                            'items_wrap'     => '<ul>%3$s</ul>',
+                            'theme_location' => 'primary_menu',
+                        ]
+                    );
+                    ?>
+                    <a href="#cta" class="btn site-header-cta">Call to action</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main id="main">
