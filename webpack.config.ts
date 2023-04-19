@@ -31,6 +31,9 @@ const webpackConfig: WebpackConfig = (env) => {
     cache: {
       type: 'filesystem',
     },
+    optimization: {
+      runtimeChunk: 'single',
+    },
   }
 }
 

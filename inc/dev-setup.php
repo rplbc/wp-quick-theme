@@ -16,8 +16,9 @@ add_action(
         wp_dequeue_script( 'quick-scripts' );
         wp_dequeue_style( 'quick-styles' );
 
-        wp_enqueue_script( 'dev', 'http://localhost:3003/js/dev.js', [], null, true );
-        wp_enqueue_script( 'scripts-dev', 'http://localhost:3003/js/main.js', [], null, true );
+        wp_enqueue_script( 'quick-dev-runtime', 'http://localhost:3003/js/runtime.js', [], null, true );
+        wp_enqueue_script( 'quick-dev-scripts', 'http://localhost:3003/js/main.js', [], null, true );
+        wp_enqueue_script( 'quick-dev-helpers', 'http://localhost:3003/js/dev.js', [], null, true );
     }
 );
 
