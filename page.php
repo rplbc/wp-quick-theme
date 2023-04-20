@@ -10,12 +10,12 @@
 get_header();
 ?>
 
-<article class="grid inner page-article">
+<section class="grid inner page-article">
     <div class="page-article-content">
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>
-</article>
+</section>
 
 <?php
 get_footer();

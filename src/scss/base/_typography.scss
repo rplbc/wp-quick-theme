@@ -38,3 +38,15 @@ h6,
 .h6 {
   font-size: 1rem;
 }
+
+.h1-title {
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+
+.pre-heading {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  font-weight: var(--fontWeight-text-bold);
+  color: #0070f3;
+}

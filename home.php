@@ -11,6 +11,8 @@ get_header();
 ?>
 
 <div class="inner bp-inner">
+<div class="pre-heading">Blog</div>
+<h1 class="h1-title">Latest posts</h1>
 <?php
 if ( have_posts() ) :
     ?>
