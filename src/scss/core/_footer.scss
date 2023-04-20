@@ -1,5 +1,25 @@
 .site-footer {
-  background-color: #111;
   width: 100%;
-  padding: 3rem 0;
+  background-color: #fff;
+  border-top: 1px solid rgba(#000, 0.06);
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    justify-content: center;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    &[aria-current] {
+      color: #000;
+    }
+  }
 }

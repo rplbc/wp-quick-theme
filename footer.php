@@ -11,7 +11,21 @@
 
 </main>
 
-<footer class="site-footer"></footer>
+<footer class="site-footer">
+    <nav class="inner site-footer-nav">
+        <?php
+        wp_nav_menu(
+            [
+                'container'      => '',
+                'depth'          => 1,
+                'fallback_cb'    => false,
+                'items_wrap'     => '<ul>%3$s</ul>',
+                'theme_location' => 'footer_menu',
+            ]
+        );
+        ?>
+    </nav>
+</footer>
 
 <?php wp_footer(); ?>
 

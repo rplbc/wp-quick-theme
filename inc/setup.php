@@ -11,6 +11,7 @@ add_action(
         register_nav_menus(
             [
                 'primary_menu' => __( 'Header Menu', 'quick' ),
+                'footer_menu'  => __( 'Footer Menu', 'quick' ),
             ]
         );
     }
