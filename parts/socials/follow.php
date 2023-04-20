@@ -10,9 +10,9 @@ $args = wp_parse_args(
     [
         'label'   => 'Follow Us',
         'socials' => [
-            'facebook'  => get_field( 'socials_facebook', 'quick_options' ),
-            'instagram' => get_field( 'socials_instagram', 'quick_options' ),
-            'linkedin'  => get_field( 'socials_linkedin', 'quick_options' ),
+            'Facebook'  => get_field( 'socials_facebook', 'quick_options' ),
+            'Instagram' => get_field( 'socials_instagram', 'quick_options' ),
+            'Linkedin'  => get_field( 'socials_linkedin', 'quick_options' ),
         ],
     ]
 )

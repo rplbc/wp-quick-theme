@@ -29,7 +29,8 @@
     ul,
     ol,
     h2,
-    h3 {
+    h3,
+    div {
       &:not(:first-child) {
         margin-top: 16px;
       }

@@ -11,8 +11,8 @@ $args = wp_parse_args(
         'label'   => 'Share',
         'url'     => get_permalink(),
         'sharers' => [
-            'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=',
-            'linkedin' => 'https://www.linkedin.com/shareArticle?mini=true&url=',
+            'Facebook' => 'https://www.facebook.com/sharer/sharer.php?u=',
+            'Linkedin' => 'https://www.linkedin.com/shareArticle?mini=true&url=',
         ],
     ]
 );
