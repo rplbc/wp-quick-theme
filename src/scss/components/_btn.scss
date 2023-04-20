@@ -1,5 +1,12 @@
 @use 'sass:color';
 
+input,
+button {
+  &.btn {
+    border: 0;
+  }
+}
+
 .btn {
   display: inline-flex;
   font-size: 12px;
@@ -9,6 +16,7 @@
   color: #fff;
   background-color: var(--btn-bg, #0070f3);
   transition: 200ms background-color ease;
+  cursor: pointer;
   white-space: nowrap;
 
   &:hover {

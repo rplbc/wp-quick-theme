@@ -1,6 +1,6 @@
 // load fonts
-@import '@fontsource/inter/latin-400.css';
-@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/700.css';
 
 // variables
 @import 'variables';
@@ -13,3 +13,26 @@
 
 // others
 @import 'pages';
+@import 'external';
+
+.skip-header {
+  padding-top: calc(var(--headerHeight) + var(--skipHeaderExtraPadding, 60px));
+}
+
+.default-margins {
+  > :first-child {
+    margin-bottom: 16px;
+  }
+
+  & > {
+    p,
+    ul,
+    ol,
+    h2,
+    h3 {
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+  }
+}

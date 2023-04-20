@@ -10,6 +10,8 @@
 // Define only in dev mode.
 define( 'QUICK_SERVE', true );
 
+require get_template_directory() . '/inc/externals.php';
+
 require get_template_directory() . '/inc/cleanup.php';
 
 require get_template_directory() . '/inc/setup.php';

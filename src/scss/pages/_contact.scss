@@ -1,0 +1,21 @@
+.cp-info {
+  p {
+    max-width: 30em;
+  }
+
+  .socials {
+    margin-top: 32px;
+  }
+}
+
+.skip-header.cp {
+  --skip-header-extra-padding: 60px;
+
+  padding-bottom: var(--skip-header-extra-padding);
+}
+
+.cp-form {
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid rgb(0 0 0 / 8%);
+}

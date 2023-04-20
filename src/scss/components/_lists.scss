@@ -1,0 +1,13 @@
+ul.list-accent {
+  list-style: disc inside;
+}
+
+ol.list-accent {
+  list-style: decimal-leading-zero inside;
+}
+
+.list-accent {
+  ::marker {
+    color: var(--marker-accent, #0070f3);
+  }
+}
