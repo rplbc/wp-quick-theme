@@ -7,10 +7,12 @@
  * @package Quick
  */
 
-get_header(); ?>
+get_header();
+?>
 
-<article class="inner page-article">
+<article class="grid inner page-article">
     <div class="page-article-content">
+        <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>
 </article>

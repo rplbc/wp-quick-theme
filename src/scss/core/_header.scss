@@ -33,21 +33,19 @@
     display: flex;
     gap: inherit;
 
-    > li {
-      > a {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        transition: 200ms color ease;
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      transition: 200ms color ease;
 
-        &:hover {
-          color: #000;
-        }
+      &:hover {
+        color: #000;
+      }
 
-        &[aria-current] {
-          font-weight: var(--fontWeight-text-bold);
-          color: #000;
-        }
+      &[aria-current] {
+        font-weight: var(--fontWeight-text-bold);
+        color: #000;
       }
     }
   }
