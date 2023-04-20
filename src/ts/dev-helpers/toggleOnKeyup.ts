@@ -10,9 +10,12 @@ export const toggleOnKeyup = (
 
   const handleKeyup = (e: KeyboardEvent) => {
     if (shortcut(e)) {
-      el.style.display = isVisible(el) ? 'none' : 'block'
+      const display = isVisible(el) ? 'none' : 'block'
+      el.style.display = display
+      localStorage.setItem(target, display)
     }
   }
 
+  el.style.display = localStorage.getItem(target) ?? 'none'
   window.addEventListener('keyup', handleKeyup)
 }
