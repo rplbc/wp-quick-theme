@@ -5,6 +5,11 @@
 // variables
 @import 'variables';
 
+// tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // common
 @import 'base';
 @import 'core';
