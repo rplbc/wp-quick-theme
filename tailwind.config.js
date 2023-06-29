@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,14 +10,26 @@ module.exports = {
     './*.php',
   ],
   theme: {
+    fontFamily: {
+      'font-sans': ['"Inter Variable"', 'sans-serif'],
+    },
     extend: {
       zIndex: {
-        'site-header': 'var(--zIndex-header)',
+        'site-header': 99,
+        'skip-to-content': 9999999,
+      },
+      height: {
+        'site-header-bar': 'var(--headerHeight)',
       },
     },
-    height: {
-      'site-header-bar': 'var(--headerHeight)',
-    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.layout-grid': {
+          '@apply grid grid-cols-6 gap-x-[--gutter] lg:grid-cols-12': {},
+        },
+      })
+    }),
+  ],
 }

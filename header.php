@@ -44,4 +44,4 @@
         </div>
     </header>
 
-    <main id="main" class="min-h-screen">
+    <main id="main" class="min-h-screen pt-[--headerHeight]">
