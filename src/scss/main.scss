@@ -12,13 +12,30 @@
 
 // common
 @import 'base';
-@import 'core';
 @import 'sections';
 @import 'components';
 
 // others
 @import 'pages';
 @import 'external';
+
+.skip-to-content {
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: var(--zIndex-skip-to-content, 9999999);
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+
+  &:focus {
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+}
 
 .skip-header {
   padding-top: calc(var(--headerHeight) + var(--skipHeaderExtraPadding, 60px));

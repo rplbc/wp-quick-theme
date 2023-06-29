@@ -8,7 +8,14 @@ module.exports = {
     './*.php',
   ],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        'site-header': 'var(--zIndex-header)',
+      },
+    },
+    height: {
+      'site-header-bar': 'var(--headerHeight)',
+    },
   },
   plugins: [],
 }
