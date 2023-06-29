@@ -40,4 +40,14 @@
   ::marker {
     color: theme('colors.indigo.600');
   }
+
+  a {
+    color: theme('colors.indigo.600');
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
