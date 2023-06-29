@@ -9,7 +9,7 @@ Quick is a minimal WordPress theme starter. It includes support for TypeScript, 
 ```bash
 # in theme directory
 git clone https://github.com/rplbc/wp-quick-theme
-cd minimal-wp-theme-starter
+cd wp-quick-theme
 ```
 
 ### Install dependencies
