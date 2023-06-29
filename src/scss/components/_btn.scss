@@ -1,40 +1,12 @@
-@use 'sass:color';
-
-input,
-button {
-  &.btn {
-    border: 0;
-  }
+// TODO: consider moving this to config
+.btn {
+  @apply cursor-pointer inline-flex py-4 px-8 rounded text-white bg-indigo-600 transition-colors;
 }
 
-.btn {
-  display: inline-flex;
-  font-size: 12px;
-  font-weight: var(--fontWeight-text-bold);
-  padding: 1em 2em;
-  border-radius: 4px;
-  color: #fff;
-  background-color: var(--btn-bg, #0070f3);
-  transition: 200ms background-color ease;
-  cursor: pointer;
-  white-space: nowrap;
+.btn:hover {
+  @apply bg-indigo-700;
+}
 
-  &:hover {
-    background-color: var(
-      --btn-bg-active,
-      color.adjust(#0070f3, $lightness: 10%)
-    );
-  }
-
-  &:active {
-    transition-duration: 50ms;
-    background-color: var(
-      --btn-bg-active,
-      color.adjust(#0070f3, $lightness: -10%)
-    );
-  }
-
-  &:focus-visible {
-    outline: 2px solid color.adjust(#0070f3, $lightness: 20%);
-  }
+.btn:active {
+  @apply bg-indigo-900 duration-75;
 }

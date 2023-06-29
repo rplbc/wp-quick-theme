@@ -1,53 +1,56 @@
 .dev-acf-preview,
 .dev-floating-grid {
   display: none;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
 }
 
 .dev-acf-preview {
-  position: fixed;
   z-index: 999999;
-  inset: 0;
-  height: 100vh;
-  padding: min(10vw, 10vh);
+  padding: 5vmin;
   background-color: rgb(0 0 0 / 75%);
-  backdrop-filter: blur(10px);
 
   &-content {
     width: 100%;
     height: 100%;
-    overflow: auto;
+    max-width: 60rem;
+    margin: auto;
+    padding: 2rem;
     background-color: #fff;
-    padding: 40px;
-    font-size: 1.5rem;
-    line-height: 1.25;
-    letter-spacing: -0.03em;
+    overflow: auto;
+  }
+
+  pre + pre {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgb(0 0 0 / 10%);
   }
 }
 
 .dev-floating-grid {
-  pointer-events: none;
-  position: fixed;
   z-index: 99999;
-  inset: 0;
-
-  > .grid {
-    height: 100vh;
-  }
+  pointer-events: none;
 
   &-col {
     position: relative;
-    border-color: blue;
+    border: 1px dashed blue;
     border-width: 0 1px;
-    border-style: dashed;
 
     &:nth-of-type(n + 2)::before {
       content: '';
       position: absolute;
-      width: 20px;
+      width: var(--gutter);
       height: 100%;
-      left: -21px;
+      left: calc(-1 * (var(--gutter) + 1px));
       top: 0;
       background-color: rgb(0 0 255 / 8%);
+    }
+
+    @media (width < 1024px) {
+      &:nth-of-type(n + 7) {
+        display: none;
+      }
     }
   }
 }

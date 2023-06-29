@@ -49,7 +49,7 @@ add_action(
         ?>
 
     <div class="dev-floating-grid">
-        <div class="grid inner">
+        <div class="inner h-full layout-grid">
             <div class="dev-floating-grid-col"></div>
             <div class="dev-floating-grid-col"></div>
             <div class="dev-floating-grid-col"></div>

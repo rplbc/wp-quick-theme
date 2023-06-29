@@ -22,26 +22,26 @@
 
     <?php wp_body_open(); ?>
 
-    <header class="site-header">
-        <div class="site-header-bar">
-            <div class="inner site-header-inner">
-                <h1 class="site-header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Quick</a></h1>
-                <nav class="site-header-nav">
+    <header class="w-full fixed z-site-header left-0 top-0">
+        <div class="bg-white border-b border-b-gray-100 h-site-header-bar flex">
+            <div class="inner flex">
+                <h1 class="text-2xl self-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Quick</a></h1>
+                <nav class="ml-auto flex gap-8" aria-label="Main menu">
                     <?php
                     wp_nav_menu(
                         [
                             'container'      => '',
                             'depth'          => 1,
                             'fallback_cb'    => false,
-                            'items_wrap'     => '<ul>%3$s</ul>',
+                            'items_wrap'     => '<ul class="flex items-center gap-[inherit]">%3$s</ul>',
                             'theme_location' => 'primary_menu',
                         ]
                     );
                     ?>
-                    <a href="#cta" class="btn site-header-cta">Call to action</a>
+                    <button class="btn self-center">Call to action</button=>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="min-h-screen pt-[--headerHeight]">

@@ -1,39 +1,14 @@
-// load fonts
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/700.css';
+// Self-hosting font
+@import '@fontsource-variable/inter/index.css';
 
-// variables
-@import 'variables';
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-// common
+// Base styles such as default font size for headings
 @import 'base';
-@import 'core';
-@import 'sections';
 @import 'components';
 
-// others
-@import 'pages';
+// For example custom CF7 styles
 @import 'external';
-
-.skip-header {
-  padding-top: calc(var(--headerHeight) + var(--skipHeaderExtraPadding, 60px));
-}
-
-.default-margins {
-  > :first-child {
-    margin-bottom: 16px;
-  }
-
-  & > {
-    p,
-    ul,
-    ol,
-    h2,
-    h3,
-    div {
-      &:not(:first-child) {
-        margin-top: 16px;
-      }
-    }
-  }
-}
