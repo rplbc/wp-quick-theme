@@ -1,10 +1,10 @@
 # Quick
 
-Quick is a minimal WordPress theme starter. It includes support for TypeScript, SCSS, PostCSS (Tailwind by default), and Stylelint.
+Quick is a minimal WordPress theme starter that provides a straightforward setup for building custom WordPress themes. It includes support for TypeScript, SCSS, PostCSS (Tailwind by default), and Stylelint.
 
 ## Usage
 
-### Clone
+### Clone the repository
 
 ```bash
 # in theme directory
@@ -21,7 +21,7 @@ composer install # stubs and PHP_CS
 
 ### Development
 
-In `functions.php` add (if not already present) something like this:
+To enable the development environment, in `functions.php` add (if not already present) something like this:
 
 ```php
 define( 'QUICK_SERVE', true );
@@ -31,19 +31,19 @@ if ( defined( 'QUICK_SERVE' ) ) {
 }
 ```
 
-The code in `dev-setup.php` dequeues styles and scripts from `setup.php`, so make sure to add `dev-setup.php` after `setup.php`. Then, run `yarn serve` to start the development server (by default it runs on port 3003 - see `webpack.config.ts`).
+**Note**: Ensure that `dev-setup.php` is added after `setup.php` to correctly dequeue styles and scripts. Next, run `yarn serve` to start the development server (default port: 3003, see webpack.config.ts).
 
-`dev-setup.php` also adds (see `src/ts/dev.ts`):
+`dev-setup.php` also adds the following features (refer to `src/ts/dev.ts`):
 
-- floating layout grid, toggle with <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\]</kbd>
-- modal with ACF `get_fields()`, toggle with <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\[</kbd>
+- floating layout grid (toggle with <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\]</kbd>)
+- modal with ACF `get_fields()` (toggle with <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\[</kbd>)
 
 ### Production
 
-Run `yarn build` which:
+Run `yarn build` to generate the following:
 
-- produces `dist` folder with things such as styles, fonts, JavaScript (to preview locally in production mode, remove `dev-setup.php` from `functions.php`)
-- packs all necessary files into `.quick` folder which is ready to export
+- `dist` folder with compiled styles, fonts, and JavaScript files (to preview locally in production mode, remove `dev-setup.php` from `functions.php`)
+- `.quick` folder containing all necessary files ready for export
 
 ## Contributing
 
