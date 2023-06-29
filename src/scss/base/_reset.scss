@@ -1,3 +1,10 @@
 html {
   font-size: 14px;
+  background-color: theme('colors.gray.50');
+}
+
+img {
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

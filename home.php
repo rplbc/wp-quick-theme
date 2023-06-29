@@ -10,13 +10,12 @@
 get_header();
 ?>
 
-<section class="inner bp-inner">
-    <div class="pre-heading">Blog</div>
-    <h1 class="h1-title">Latest posts</h1>
+<section class="inner inner py-12">
+    <h1 class="mb-4">Latest posts</h1>
     <?php
     if ( have_posts() ) :
         ?>
-        <div class="grid bp-grid">
+        <div class="layout-grid">
         <?php
         while ( have_posts() ) :
             the_post();

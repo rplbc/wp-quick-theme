@@ -9,12 +9,10 @@
 
 get_header(); ?>
 
-<article class="inner page-article">
-    <div class="page-article-content page-404">
-        <h1><?php esc_html_e( 'Page not found', 'default' ); ?></h1>
-        <style>.page-404{text-align:center;padding:120px 0;}</style>
-    </div>
-</article>
+<section class="inner py-12 flex flex-col items-center gap-4">
+    <h1 class="text-center"><?php esc_html_e( 'Page not found', 'default' ); ?></h1>
+    <a href="/" class="btn"><?php esc_html_e( 'Homepage', 'default' ); ?></a>
+</section>
 
 <?php
 get_footer();
