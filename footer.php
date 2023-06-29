@@ -12,7 +12,7 @@
 </main>
 
 <footer class="bg-white border-t border-t-gray-100 py-8">
-    <nav class="inner">
+    <div class="inner">
         <?php
         wp_nav_menu(
             [
@@ -24,7 +24,7 @@
             ]
         );
         ?>
-    </nav>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>

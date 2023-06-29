@@ -10,11 +10,9 @@
 get_header();
 ?>
 
-<section class="grid inner page-article">
-    <div class="page-article-content">
-        <h1><?php the_title(); ?></h1>
-        <?php the_content(); ?>
-    </div>
+<section class="inner py-12">
+    <h1 class="mb-4"><?php the_title(); ?></h1>
+    <div><?php the_content(); ?></div>
 </section>
 
 <?php

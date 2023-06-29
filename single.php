@@ -10,15 +10,17 @@
 get_header();
 ?>
 
-<article class="grid inner page-article">
-    <div class="page-top">
+<article class="inner layout-grid py-12">
+    <div class="flex flex-col gap-6 items-center text-center col-span-full lg:col-[2_/_-2] xl:col-[3_/_-3]">
         <h1><?php the_title(); ?></h1>
         <?php get_template_part( 'parts/socials/share' ); ?>
     </div>
-    <div class="with-aspect single-featured-image">
-        <?php echo wp_get_attachment_image( get_field( 'featuredImage' ), 'full' ); ?>
+    <div class="my-12 col-span-full">
+        <div class="aspect-video">
+            <?php echo wp_get_attachment_image( get_field( 'featuredImage' ), 'full' ); ?>
+        </div>
     </div>
-    <div class="page-article-content">
+    <div class="rich-content col-span-full lg:col-[2_/_-2] xl:col-[3_/_-3]">
         <?php the_content(); ?>
     </div>
 </article>
