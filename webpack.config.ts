@@ -32,7 +32,7 @@ const webpackConfig: WebpackConfig = (env) => {
       type: 'filesystem',
     },
     optimization: {
-      runtimeChunk: 'single',
+      runtimeChunk: WEBPACK_SERVE ? 'single' : undefined,
     },
   }
 }
