@@ -1,7 +1,7 @@
 import '../scss/dev-helpers.scss'
 import '../scss/main.scss'
 
-import { isVisible } from './helpers'
+const isVisible = (el: HTMLElement) => el.offsetWidth > 0 || el.offsetHeight > 0
 
 const toggleOnKeyup = (
   target: string,
