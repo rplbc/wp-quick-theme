@@ -15,7 +15,7 @@ cd wp-quick-theme
 ### Install dependencies
 
 ```bash
-yarn install
+pnpm install
 composer install # stubs and PHP_CS
 ```
 
@@ -31,7 +31,7 @@ if ( defined( 'QUICK_SERVE' ) ) {
 }
 ```
 
-**Note**: Ensure that `dev-setup.php` is added after `setup.php` to correctly dequeue styles and scripts. Next, run `yarn serve` to start the development server (default port: 3003, see webpack.config.ts).
+**Note**: Ensure that `dev-setup.php` is added after `setup.php` to correctly dequeue styles and scripts. Next, run `pnpm serve` to start the development server (default port: 3003, see webpack.config.ts).
 
 `dev-setup.php` also adds the following features (refer to `src/ts/dev.ts`):
 
@@ -40,7 +40,7 @@ if ( defined( 'QUICK_SERVE' ) ) {
 
 ### Production
 
-Run `yarn build` to generate the following:
+Run `pnpm build` to generate the following:
 
 - `dist` folder with compiled styles, fonts, and JavaScript files (to preview locally in production mode, remove `dev-setup.php` from `functions.php`)
 - `.quick` folder containing all necessary files ready for export

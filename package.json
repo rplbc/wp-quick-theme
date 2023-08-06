@@ -1,7 +1,6 @@
 {
   "name": "wp-quick-theme",
   "private": true,
-  "packageManager": "yarn@1.22.19",
   "scripts": {
     "build": "webpack",
     "serve": "webpack serve",
