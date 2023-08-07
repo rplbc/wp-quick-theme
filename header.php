@@ -38,7 +38,7 @@
                         ]
                     );
                     ?>
-                    <button class="btn self-center">Call to action</button=>
+                    <button class="btn self-center">Call to action</button>
                 </nav>
             </div>
         </div>
