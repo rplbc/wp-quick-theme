@@ -1,5 +1,4 @@
 *.js
 *.ts
-config/
 dist/
 node_modules/

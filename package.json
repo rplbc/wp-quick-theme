@@ -2,9 +2,8 @@
   "name": "wp-quick-theme",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "serve": "webpack serve",
-    "watch": "webpack watch"
+    "dev": "webpack serve",
+    "build": "webpack"
   },
   "devDependencies": {
     "@fontsource-variable/inter": "^5.0.3",
