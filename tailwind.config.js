@@ -11,7 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'font-sans': ['"Inter Variable"', 'sans-serif'],
+      sans: ['"Inter Variable"', 'sans-serif'],
     },
     extend: {
       zIndex: {
