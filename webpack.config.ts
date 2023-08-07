@@ -107,6 +107,7 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
                       destination: `${exportDir}/${name}`,
                     })),
                   ],
+                  delete: [`${exportDir}/inc/dev-setup.php`],
                 },
               },
             }),
