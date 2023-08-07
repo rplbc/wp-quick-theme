@@ -31,7 +31,7 @@ if ( defined( 'QUICK_SERVE' ) ) {
 }
 ```
 
-**Note**: Ensure that `dev-setup.php` is added after `setup.php` to correctly dequeue styles and scripts. Next, run `pnpm serve` to start the development server (default port: 3003, see webpack.config.ts).
+**Note**: Ensure that `dev-setup.php` is added after `setup.php` to correctly dequeue styles and scripts. Next, run `pnpm dev` to start the development server (default port: 3003, see webpack.config.ts).
 
 `dev-setup.php` also adds the following features (refer to `src/ts/dev.ts`):
 
