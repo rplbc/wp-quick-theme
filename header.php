@@ -9,7 +9,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="text-sm bg-gray-50 antialiased">
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />

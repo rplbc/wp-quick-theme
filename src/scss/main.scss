@@ -1,14 +1,51 @@
-// Self-hosting font
-@import '@fontsource-variable/inter/index.css';
-
 // Tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// Base styles such as default font size for headings
-@import 'base';
-@import 'components';
+// Base styles
+@layer base {
+  @import '@fontsource-variable/inter/index.css';
 
-// For example custom CF7 styles
-@import 'external';
+  :root {
+    --headerHeight: 80px;
+    --gutter: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  @import 'components';
+}
