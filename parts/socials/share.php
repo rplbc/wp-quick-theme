@@ -24,9 +24,9 @@ $args = wp_parse_args(
         <?php
         foreach ( $args['sharers'] as $sharer => $sharerUrl ) :
             ?>
-            <li class="socials-list-item">
-                <a href="<?php echo esc_url( $sharerUrl . $args['url'] ); ?>" target="_blank"><?php echo esc_html( $sharer ); ?></a>
-            </li>
+        <li class="socials-list-item">
+            <a href="<?php echo esc_url( $sharerUrl . $args['url'] ); ?>" target="_blank"><?php echo esc_html( $sharer ); ?></a>
+        </li>
             <?php
         endforeach;
         ?>

@@ -11,7 +11,7 @@
 
 </main>
 
-<footer class="bg-white border-t border-t-gray-100 py-8">
+<footer class="border-t border-t-gray-100 bg-white py-8">
     <div class="inner">
         <?php
         wp_nav_menu(

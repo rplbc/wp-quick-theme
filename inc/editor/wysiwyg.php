@@ -10,19 +10,7 @@ add_filter(
     function ( $toolbars ) {
         unset( $toolbars['Basic'] );
 
-        $toolbars['Full'][1] = [
-            'formatselect',
-            'styleselect',
-            'link',
-            'bold',
-            'italic',
-            'bullist',
-            'numlist',
-            'removeformat',
-            'undo',
-            'redo',
-            'wp_help',
-        ];
+        $toolbars['Full'][1] = [ 'formatselect', 'styleselect', 'link', 'bold', 'italic', 'bullist', 'numlist', 'removeformat', 'undo', 'redo', 'wp_help' ];
 
         $toolbars['Full'][2] = [];
 
@@ -32,7 +20,7 @@ add_filter(
 
 add_filter(
     'tiny_mce_before_init',
-    function( $args ) {
+    function ( $args ) {
         $styleFormats = [
             [
                 'title' => __( 'Size', 'default' ),
@@ -41,7 +29,6 @@ add_filter(
                         'title'    => 'Heading 1',
                         'classes'  => 'h1',
                         'selector' => 'h1,h2,h3,p,div',
-
                     ],
                     [
                         'title'    => 'Heading 2',
