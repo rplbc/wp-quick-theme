@@ -16,7 +16,6 @@ module.exports = {
     extend: {
       zIndex: {
         'site-header': 99,
-        'skip-to-content': 9999999,
       },
       height: {
         'site-header-bar': 'var(--headerHeight)',

@@ -32,8 +32,8 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             dev: './src/ts/dev.ts',
           }
         : {
-            styles: './src/scss/main.scss',
-            'editor-styles': './src/scss/editor.scss',
+            styles: './src/scss/main.css',
+            'editor-styles': './src/scss/editor.css',
           }),
     },
     output: {
@@ -79,13 +79,12 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
           },
         },
         {
-          test: /\.scss$/,
+          test: /\.css$/,
           exclude: /node_modules/,
           use: [
             isDev ? 'style-loader' : miniCSSLoader,
             'css-loader',
             'postcss-loader',
-            'sass-loader',
           ],
         },
         {

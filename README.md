@@ -1,6 +1,6 @@
 # Quick
 
-Quick is a minimal WordPress theme starter that provides a straightforward setup for building custom WordPress themes. It includes support for TypeScript, SCSS, and PostCSS (Tailwind by default).
+Quick is a minimal WordPress theme starter that provides a straightforward setup for building custom WordPress themes. It includes support for TypeScript and TailwindCSS.
 
 ## Usage
 

@@ -1,0 +1,56 @@
+.dev-acf-preview,
+.dev-floating-grid {
+  display: none;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+}
+
+.dev-acf-preview {
+  z-index: 999999;
+  padding: 5vmin;
+  background-color: rgb(0 0 0 / 75%);
+
+  pre + pre {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgb(0 0 0 / 10%);
+  }
+}
+
+.dev-acf-preview-content {
+  width: 100%;
+  height: 100%;
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.dev-floating-grid {
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.dev-floating-grid-col {
+  position: relative;
+  border: 1px dashed blue;
+  border-width: 0 1px;
+
+  &:nth-of-type(n + 2)::before {
+    content: '';
+    position: absolute;
+    width: var(--gutter);
+    height: 100%;
+    left: calc(-1 * (var(--gutter) + 1px));
+    top: 0;
+    background-color: rgb(0 0 255 / 8%);
+  }
+
+  @media (width < 1024px) {
+    &:nth-of-type(n + 7) {
+      display: none;
+    }
+  }
+}
