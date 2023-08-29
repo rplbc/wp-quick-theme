@@ -3,92 +3,10 @@
     "title": "Theme options",
     "fields": [
         {
-            "key": "field_63f4ca01bc92b",
-            "label": "Social media",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6418f8176f26b",
-            "label": "Facebook",
-            "name": "socialsFacebook",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_6418f88c09e57",
-            "label": "Instagram",
-            "name": "socialsInstagram",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_6418f89809e58",
-            "label": "LinkedIn",
-            "name": "socialsLinkedin",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_6418f8fb6746e",
-            "label": "Contact",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6418f919c822e",
-            "label": "Phone",
-            "name": "contactPhone",
+            "key": "field_64edfe8a420b3",
+            "label": "Field",
+            "name": "field",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -100,51 +18,10 @@
             },
             "acfe_save_meta": 0,
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6418f927c822f",
-            "label": "E-mail",
-            "name": "contactEmail",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6418f92fc8230",
-            "label": "Address",
-            "name": "contactAddress",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "placeholder": "",
             "maxlength": "",
-            "rows": 2,
-            "new_lines": "br",
-            "acfe_textarea_code": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -164,6 +41,7 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -171,5 +49,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1681996052
+    "modified": 1693318803
 }
