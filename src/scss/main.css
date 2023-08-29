@@ -1,0 +1,11 @@
+@import '@fontsource-variable/inter/index.css';
+
+@import 'tailwindcss/base';
+@import './base.css';
+
+@import 'tailwindcss/components';
+@import './components/btn.css';
+@import './components/inner.css';
+@import './components/rich-content.css';
+
+@import 'tailwindcss/utilities';

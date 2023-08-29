@@ -1,5 +1,5 @@
-import '../scss/dev-helpers.scss'
-import '../scss/main.scss'
+import '../scss/dev-helpers.css'
+import '../scss/main.css'
 
 const isVisible = (el: HTMLElement) => el.offsetWidth > 0 || el.offsetHeight > 0
 

@@ -11,7 +11,15 @@ import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
 const exportDir = '.quick'
 const distDir = 'dist'
 const devServerPort = 3003
-const dirsToExport = [distDir, 'acf-json', 'inc', 'parts', 'templates']
+const dirsToExport = [
+  distDir,
+  'acf-json',
+  'blocks',
+  'public',
+  'inc',
+  'parts',
+  'templates',
+]
 
 export default function (env = { WEBPACK_SERVE: false }): Configuration {
   const { WEBPACK_SERVE: isDev = false } = env
@@ -24,8 +32,8 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             dev: './src/ts/dev.ts',
           }
         : {
-            styles: './src/scss/main.scss',
-            'editor-styles': './src/scss/editor.scss',
+            styles: './src/scss/main.css',
+            'editor-styles': './src/scss/editor.css',
           }),
     },
     output: {
@@ -37,12 +45,13 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
       extensions: ['.ts', '...'],
     },
     mode: isDev ? 'development' : 'production',
-    devtool: 'source-map',
+    devtool: false,
     devServer: {
       port: devServerPort,
       hot: true,
       watchFiles: [
         'inc/**/*.php',
+        'blocks/**/*.php',
         'parts/**/*.php',
         'templates/**/*.php',
         '*.php',
@@ -70,13 +79,12 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
           },
         },
         {
-          test: /\.scss$/,
+          test: /\.css$/,
           exclude: /node_modules/,
           use: [
             isDev ? 'style-loader' : miniCSSLoader,
             'css-loader',
             'postcss-loader',
-            'sass-loader',
           ],
         },
         {

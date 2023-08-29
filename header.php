@@ -9,7 +9,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="bg-gray-50 antialiased">
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -18,14 +18,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a href="#main" class="skip-to-content"><?php esc_html_e( 'Skip to content', 'quick' ); ?></a>
-
     <?php wp_body_open(); ?>
 
-    <header class="w-full fixed z-site-header left-0 top-0">
-        <div class="bg-white border-b border-b-gray-100 h-site-header-bar flex">
+    <header class="z-site-header fixed left-0 top-0 w-full">
+        <div class="h-site-header-bar flex border-b border-b-gray-100 bg-white">
             <div class="inner flex">
-                <h1 class="text-2xl self-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Quick</a></h1>
+                <h1 class="self-center text-2xl"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Quick</a></h1>
                 <nav class="ml-auto flex gap-8" aria-label="Main menu">
                     <?php
                     wp_nav_menu(

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<section class="inner py-12 flex flex-col items-center gap-4">
+<section class="inner flex flex-col items-center gap-4 py-12">
     <h1 class="text-center"><?php esc_html_e( 'Page not found', 'default' ); ?></h1>
     <a href="/" class="btn"><?php esc_html_e( 'Homepage', 'default' ); ?></a>
 </section>

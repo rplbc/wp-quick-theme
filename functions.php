@@ -7,9 +7,6 @@
  * @package Quick
  */
 
-// Define only in dev mode.
-define( 'QUICK_SERVE', true );
-
 require get_template_directory() . '/inc/externals.php';
 
 require get_template_directory() . '/inc/cleanup.php';
@@ -22,6 +19,6 @@ require get_template_directory() . '/inc/editor/blocks.php';
 
 require get_template_directory() . '/inc/editor/wysiwyg.php';
 
-if ( defined( 'QUICK_SERVE' ) ) {
+if ( file_exists( get_template_directory() . '/inc/dev-setup.php' ) ) {
     require get_template_directory() . '/inc/dev-setup.php';
 }
