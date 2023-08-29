@@ -21,12 +21,10 @@ composer install # stubs and PHP_CS
 
 ### Development
 
-To enable the development environment, in `functions.php` add (if not already present) something like this:
+To enable the development environment, in `functions.php` include `inc/dev-setup.php`
 
 ```php
-define( 'QUICK_SERVE', true );
-
-if ( defined( 'QUICK_SERVE' ) ) {
+if ( file_exists( get_template_directory() . '/inc/dev-setup.php' ) ) {
     require get_template_directory() . '/inc/dev-setup.php';
 }
 ```
