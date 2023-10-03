@@ -7,8 +7,6 @@
  * @package Quick
  */
 
-require get_template_directory() . '/inc/externals.php';
-
 require get_template_directory() . '/inc/cleanup.php';
 
 require get_template_directory() . '/inc/setup.php';
