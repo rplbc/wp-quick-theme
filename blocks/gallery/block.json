@@ -1,0 +1,23 @@
+{
+  "name": "quick/gallery",
+  "title": "Gallery",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "gallery.php"
+  },
+  "supports": {
+    "align": false,
+    "alignWide": false,
+    "anchor": false,
+    "ariaLabel": false,
+    "className": false,
+    "customClassName": false,
+    "defaultStylePicker": false,
+    "html": false,
+    "layout": false,
+    "lock": false,
+    "mode": false,
+    "multiple": false,
+    "reusable": false
+  }
+}
