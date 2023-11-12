@@ -42,3 +42,30 @@ add_action(
         wp_enqueue_style( 'quick-styles', get_template_directory_uri() . '/dist/css/styles.css', [], $themeVersion );
     }
 );
+
+add_action(
+    'acf/init',
+    function() {
+        if ( function_exists( 'acf_add_options_sub_page' ) ) {
+            $root_options_page = acf_add_options_page(
+                [
+                    'page_title' => __( 'Theme options', 'quick' ),
+                    'menu_title' => __( 'Quick', 'quick' ),
+                    'menu_slug'  => 'quick-options',
+                    'icon_url'   => 'dashicons-admin-home',
+                    'position'   => 1,
+                    'post_id'    => 'quick_options',
+                    'redirect'   => false,
+                ]
+            );
+
+            acf_add_options_sub_page(
+                [
+                    'page_title'  => 'Subpage',
+                    'menu_title'  => 'Subpage',
+                    'parent_slug' => $root_options_page['menu_slug'],
+                ]
+            );
+        }
+    }
+);
