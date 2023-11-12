@@ -5,9 +5,9 @@ import { setBodyScroll } from '../../utils'
 import { swiperSlideTemplate, galleryBlockTemplate } from './templates'
 
 export default class GalleryBlock {
-  public $el!: HTMLElement
+  public $el: HTMLElement
   public isAnimating
-  public images!: HTMLImageElement[]
+  public images: HTMLImageElement[]
 
   constructor(element: HTMLElement) {
     this.$el = element
@@ -29,7 +29,6 @@ export default class GalleryBlock {
 
   private init(initialSlide = 0) {
     if (this.isAnimating) return
-    this.isAnimating = true
 
     const el = document.querySelector<HTMLElement>('.qb-gallery')
 
@@ -42,13 +41,16 @@ export default class GalleryBlock {
 
   private open(initialSlide: number) {
     setBodyScroll(false)
-    let is = ''
+    let slidesMarkup = ''
 
     this.images.forEach((img) => {
-      is += swiperSlideTemplate(img.src)
+      slidesMarkup += swiperSlideTemplate(img.src)
     })
 
-    document.body.insertAdjacentHTML('beforeend', galleryBlockTemplate(is))
+    document.body.insertAdjacentHTML(
+      'beforeend',
+      galleryBlockTemplate(slidesMarkup)
+    )
 
     const item = document.querySelector<HTMLElement>('.qb-gallery')!
     new Swiper(item.querySelector<HTMLElement>('.swiper')!, {
@@ -57,8 +59,8 @@ export default class GalleryBlock {
       initialSlide,
     })
 
+    this.isAnimating = true
     const anim = item.animate([{ opacity: 0 }, { opacity: 1 }])
-
     anim.onfinish = () => {
       this.isAnimating = false
     }
@@ -76,8 +78,8 @@ export default class GalleryBlock {
   }
 
   private close(el: HTMLElement) {
+    this.isAnimating = true
     const anim = el.animate([{ opacity: 0 }])
-
     anim.onfinish = () => {
       el.remove()
       setBodyScroll(true)
