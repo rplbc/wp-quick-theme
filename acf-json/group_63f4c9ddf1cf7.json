@@ -1,6 +1,6 @@
 {
     "key": "group_63f4c9ddf1cf7",
-    "title": "Theme options",
+    "title": "[Options] Theme options",
     "fields": [
         {
             "key": "field_64edfe8a420b3",
@@ -16,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -29,7 +28,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "quick-options"
+                "value": "acf-options-quick"
             }
         ]
     ],
@@ -47,7 +46,12 @@
         "json"
     ],
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1693318803
+    "modified": 1699805585
 }
