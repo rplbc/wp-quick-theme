@@ -3,11 +3,12 @@ const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './*.php',
+    './blocks/**/*.php',
     './inc/**/*.php',
     './parts/**/*.php',
     './src/ts/**/*.ts',
     './templates/**/*.php',
-    './*.php',
   ],
   theme: {
     fontFamily: {
@@ -15,7 +16,11 @@ module.exports = {
     },
     extend: {
       zIndex: {
-        'site-header': 99,
+        'site-header': 51,
+        gallery: 52,
+      },
+      transitionDuration: {
+        DEFAULT: '300ms',
       },
       height: {
         'site-header-bar': 'var(--headerHeight)',
