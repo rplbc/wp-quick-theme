@@ -16,8 +16,6 @@
     "html": false,
     "layout": false,
     "lock": false,
-    "mode": false,
-    "multiple": false,
-    "reusable": false
+    "mode": false
   }
 }
