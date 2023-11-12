@@ -51,8 +51,6 @@ add_action(
                 [
                     'page_title' => wp_get_theme()->get( 'Name' ),
                     'menu_title' => wp_get_theme()->get( 'Name' ),
-                    'menu_slug'  => 'quick-options',
-                    'icon_url'   => 'dashicons-admin-home',
                     'position'   => 1,
                     'post_id'    => 'quick_options',
                     'redirect'   => false,
