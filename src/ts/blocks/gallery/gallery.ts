@@ -2,20 +2,15 @@ import Swiper from 'swiper'
 import { Keyboard } from 'swiper/modules'
 
 import { setBodyScroll } from '../../utils'
-import defaultOptions from './defaults'
 import { swiperSlideTemplate, galleryBlockTemplate } from './templates'
-
-import type { Options } from './types'
 
 export default class GalleryBlock {
   public $el!: HTMLElement
-  public options!: Options
   public isAnimating
   public images!: HTMLImageElement[]
 
-  constructor(element: HTMLElement, options?: Partial<Options>) {
+  constructor(element: HTMLElement) {
     this.$el = element
-    this.options = { ...defaultOptions, ...options }
     this.isAnimating = false
     this.images = [
       ...this.$el.querySelectorAll<HTMLImageElement>('img[data-index]'),
@@ -62,9 +57,7 @@ export default class GalleryBlock {
       initialSlide,
     })
 
-    const anim = item.animate([{ opacity: 0 }, { opacity: 1 }], {
-      duration: this.options.duration,
-    })
+    const anim = item.animate([{ opacity: 0 }, { opacity: 1 }])
 
     anim.onfinish = () => {
       this.isAnimating = false
@@ -83,9 +76,7 @@ export default class GalleryBlock {
   }
 
   private close(el: HTMLElement) {
-    const anim = el.animate([{ opacity: 0 }], {
-      duration: this.options.duration,
-    })
+    const anim = el.animate([{ opacity: 0 }])
 
     anim.onfinish = () => {
       el.remove()
