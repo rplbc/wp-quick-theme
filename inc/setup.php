@@ -49,8 +49,8 @@ add_action(
         if ( function_exists( 'acf_add_options_sub_page' ) ) {
             $root_options_page = acf_add_options_page(
                 [
-                    'page_title' => __( 'Theme options', 'quick' ),
-                    'menu_title' => __( 'Quick', 'quick' ),
+                    'page_title' => wp_get_theme()->get( 'Name' ),
+                    'menu_title' => wp_get_theme()->get( 'Name' ),
                     'menu_slug'  => 'quick-options',
                     'icon_url'   => 'dashicons-admin-home',
                     'position'   => 1,
