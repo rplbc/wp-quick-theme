@@ -6,24 +6,28 @@
   <arg name="basepath" value="." />
   <arg name="parallel" value="8" />
   <arg name="extensions" value="php" />
+  <arg name="colors" />
+  <arg value="n" />
+  <arg value="s" />
 
-  <exclude-pattern>/vendor/*</exclude-pattern>
-  <exclude-pattern>/node_modules/*</exclude-pattern>
+  <exclude-pattern>./vendor/*</exclude-pattern>
+  <exclude-pattern>./node_modules/*</exclude-pattern>
+  <exclude-pattern>./.quick/*</exclude-pattern>
 
-  <rule ref="WordPress">
-    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
-    <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-    <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
-    <exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
-    <exclude name="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase" />
-  </rule>
+  <rule ref="PSR12" />
 
-  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="4" />
-      <property name="tabIndent" value="false" />
-    </properties>
+  <rule ref="Squiz.Commenting">
+    <include-pattern>./lib/*</include-pattern>
+    <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" />
+    <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing" />
+    <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
+    <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName" />
+    <exclude name="Squiz.Commenting.FileComment.Missing" />
+    <exclude name="Squiz.Commenting.BlockComment.NoEmptyLineAfter" />
+    <exclude name="Squiz.Commenting.FileComment.MissingAuthorTag" />
+    <exclude name="Squiz.Commenting.FunctionComment.MissingReturn" />
+    <exclude name="Squiz.Commenting.VariableComment.MissingVar" />
   </rule>
 </ruleset>
