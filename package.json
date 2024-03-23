@@ -2,8 +2,19 @@
   "name": "wp-quick-theme",
   "private": true,
   "scripts": {
+    "build": "webpack",
     "dev": "webpack serve",
-    "build": "webpack"
+    "format": "pnpm run \"/format:/\"",
+    "format:php": "cross-env ./vendor/bin/phpcbf",
+    "format:prettier": "prettier --write ./src",
+    "lint": "pnpm run \"/lint:/\"",
+    "lint:php": "cross-env ./vendor/bin/phpcs",
+    "lint:ts": "eslint ./src --cache --ext .ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.0.8",
+    "focus-trap": "^7.5.2",
+    "swiper": "^10.3.0"
   },
   "devDependencies": {
     "@swc/core": "^1.3.46",
@@ -12,6 +23,7 @@
     "@types/webpack-env": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "cssnano": "^6.0.1",
     "eslint": "^8.37.0",
@@ -24,6 +36,7 @@
     "postcss-nesting": "^12.0.1",
     "postcss-preset-env": "^8.3.0",
     "postcss-url": "^10.1.3",
+    "prettier": "^3.2.5",
     "style-loader": "^3.3.2",
     "swc-loader": "^0.2.3",
     "tailwindcss": "^3.3.2",
@@ -33,10 +46,5 @@
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.2",
     "webpack-remove-empty-scripts": "^1.0.1"
-  },
-  "dependencies": {
-    "@fontsource-variable/inter": "^5.0.8",
-    "focus-trap": "^7.5.2",
-    "swiper": "^10.3.0"
   }
 }

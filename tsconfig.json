@@ -11,7 +11,8 @@
     "noUnusedParameters": true,
     "removeComments": true,
     "strict": true,
-    "target": "ES6"
+    "target": "ES6",
+    "noEmit": true
   },
   "include": ["src"],
   "ts-node": {
