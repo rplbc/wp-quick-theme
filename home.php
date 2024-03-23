@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Blog page template
  *
@@ -13,13 +14,13 @@ get_header();
 <section class="inner py-12">
     <h1 class="mb-4">Latest posts</h1>
     <?php
-    if ( have_posts() ) :
+    if (have_posts()) :
         ?>
     <div class="layout-grid">
         <?php
-        while ( have_posts() ) :
+        while (have_posts()) :
             the_post();
-            get_template_part( 'parts/blog/excerpt' );
+            get_template_part('parts/blog/excerpt');
         endwhile;
         ?>
     </div>
