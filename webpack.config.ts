@@ -7,19 +7,7 @@ import path from 'path'
 import type { Configuration } from 'webpack'
 import 'webpack-dev-server'
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
-
-const exportDir = '.quick'
-const distDir = 'dist'
-const devServerPort = 3003
-const dirsToExport = [
-  distDir,
-  'acf-json',
-  'blocks',
-  'public',
-  'inc',
-  'parts',
-  'templates',
-]
+import config from './quick.config'
 
 export default function (env = { WEBPACK_SERVE: false }): Configuration {
   const { WEBPACK_SERVE: isDev = false } = env
@@ -32,13 +20,13 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             dev: './src/ts/dev.ts',
           }
         : {
-            styles: './src/scss/main.css',
-            'editor-styles': './src/scss/editor.css',
+            styles: './src/css/main.css',
+            'editor-styles': './src/css/editor.css',
           }),
     },
     output: {
       filename: 'js/[name].js',
-      path: path.resolve(__dirname, distDir),
+      path: path.resolve(__dirname, config.distDir),
       clean: true,
     },
     resolve: {
@@ -47,7 +35,7 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
     mode: isDev ? 'development' : 'production',
     devtool: false,
     devServer: {
-      port: devServerPort,
+      port: config.devServerPort,
       hot: true,
       watchFiles: [
         'inc/**/*.php',
@@ -102,20 +90,20 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             new FileManagerPlugin({
               events: {
                 onStart: {
-                  delete: [exportDir],
+                  delete: [config.exportDir],
                 },
                 onEnd: {
                   copy: [
                     {
                       source: '*.{php,css}|theme.json',
-                      destination: exportDir,
+                      destination: config.exportDir,
                     },
-                    ...dirsToExport.map((name) => ({
+                    ...config.dirsToExport.map((name) => ({
                       source: name,
-                      destination: `${exportDir}/${name}`,
+                      destination: `${config.exportDir}/${name}`,
                     })),
                   ],
-                  delete: [`${exportDir}/inc/dev-setup.php`],
+                  delete: [`${config.exportDir}/inc/dev-setup.php`],
                 },
               },
             }),

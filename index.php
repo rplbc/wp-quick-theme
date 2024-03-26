@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Main template
  *
@@ -8,5 +9,4 @@
  */
 
 get_header();
-
 get_footer();

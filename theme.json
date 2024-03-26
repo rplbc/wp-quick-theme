@@ -24,7 +24,9 @@
       "defaultDuotone": false
     },
     "custom": {},
-    "layout": {},
+    "layout": {
+      "allowEditing": false
+    },
     "spacing": {
       "margin": false,
       "padding": false,
@@ -42,6 +44,19 @@
       "textTransform": false,
       "fontSizes": [],
       "fontFamilies": []
+    },
+    "lightbox": {
+      "enabled": false,
+      "allowEditing": false
+    },
+    "position": { "sticky": false },
+    "blocks": {
+      "core/image": {
+        "lightbox": {
+          "enabled": false,
+          "allowEditing": false
+        }
+      }
     }
   }
 }
