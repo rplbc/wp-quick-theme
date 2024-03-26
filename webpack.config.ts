@@ -32,8 +32,8 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             dev: './src/ts/dev.ts',
           }
         : {
-            styles: './src/scss/main.css',
-            'editor-styles': './src/scss/editor.css',
+            styles: './src/css/main.css',
+            'editor-styles': './src/css/editor.css',
           }),
     },
     output: {
