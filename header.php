@@ -24,16 +24,17 @@
     <header class="z-site-header fixed left-0 top-0 w-full">
         <div class="h-site-header-bar flex border-b border-b-gray-100 bg-white">
             <div class="inner flex">
-                <h1 class="self-center text-2xl"><a href="<?php echo esc_url(home_url('/')); ?>">Quick</a></h1>
+                <h1 class="self-center text-2xl"><a href="<?php echo esc_url(home_url('/')); ?>">Quick</a>
+                </h1>
                 <nav class="ml-auto flex gap-8" aria-label="Main menu">
                     <?php
                     wp_nav_menu([
-                            'container'      => '',
-                            'depth'          => 1,
-                            'fallback_cb'    => false,
-                            'items_wrap'     => '<ul class="flex items-center gap-[inherit]">%3$s</ul>',
-                            'theme_location' => 'primary_menu',
-                        ]);
+                        'container' => '',
+                        'depth' => 1,
+                        'fallback_cb' => false,
+                        'items_wrap' => '<ul class="flex items-center gap-[inherit]">%3$s</ul>',
+                        'theme_location' => 'primary_menu',
+                    ]);
                     ?>
                     <button class="btn self-center">Call to action</button>
                 </nav>

@@ -18,7 +18,8 @@
             <span class="h-1 w-1 flex-shrink-0 self-center rounded-full bg-slate-300"></span>
             <div class=""><?php echo get_the_date(); ?></div>
         </div>
-        <h2 class="h4 line-clamp-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="h4 line-clamp-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h2>
         <p class="line-clamp-4"><?php the_field('excerpt', get_the_ID()); ?></p>
         <a href="<?php the_permalink(); ?>" class="btn mt-2 self-start"><?php esc_html_e('Read more', 'default'); ?></a>
     </div>

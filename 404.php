@@ -15,5 +15,4 @@ get_header(); ?>
     <a href="/" class="btn"><?php esc_html_e('Homepage', 'default'); ?></a>
 </section>
 
-<?php
-get_footer();
+<?php get_footer();
