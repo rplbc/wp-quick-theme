@@ -11,9 +11,9 @@
 get_header();
 ?>
 
-<section class="inner py-12">
+<section class="max-w-4xl mx-auto py-12">
     <h1 class="mb-4"><?php the_title(); ?></h1>
-    <div><?php the_content(); ?></div>
+    <div class="rich-text"><?php the_content(); ?></div>
 </section>
 
 <?php

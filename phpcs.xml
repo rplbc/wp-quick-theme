@@ -15,14 +15,5 @@
   <exclude-pattern>./.quick/*</exclude-pattern>
 
   <rule ref="PSR12" />
-
   <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
-
-  <rule ref="Squiz.Commenting">
-    <include-pattern>./lib/*</include-pattern>
-    <exclude name="Squiz.Commenting.BlockComment" />
-    <exclude name="Squiz.Commenting.FileComment" />
-    <exclude name="Squiz.Commenting.FunctionComment" />
-    <exclude name="Squiz.Commenting.VariableComment" />
-  </rule>
 </ruleset>

@@ -14,7 +14,7 @@
     "target": "ES6",
     "noEmit": true
   },
-  "include": ["src", "*.ts"],
+  "include": ["."],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

@@ -21,10 +21,11 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="z-site-header fixed left-0 top-0 w-full">
-        <div class="h-site-header-bar flex border-b border-b-gray-100 bg-white">
-            <div class="inner flex">
-                <h1 class="self-center text-2xl"><a href="<?php echo esc_url(home_url('/')); ?>">Quick</a>
+    <header class="z-50 fixed left-0 top-0 w-full">
+        <div class="h-20 flex border-b border-b-gray-100 bg-white">
+            <div class="container flex">
+                <h1 class="self-center text-2xl">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">Quick</a>
                 </h1>
                 <nav class="ml-auto flex gap-8" aria-label="Main menu">
                     <?php
@@ -36,7 +37,9 @@
                         'theme_location' => 'primary_menu',
                     ]);
                     ?>
-                    <button class="btn self-center">Call to action</button>
+                    <button class="self-center rounded bg-indigo-600 px-4 py-2 font-semibold text-white">
+                        Call to action
+                    </button>
                 </nav>
             </div>
         </div>
