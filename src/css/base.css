@@ -1,15 +1,9 @@
-:root {
-  --headerHeight: 80px;
-  --gutter: 20px;
-}
-
 h1 {
   font-size: 3rem;
 }
 
 h2 {
   font-size: 2.5rem;
-  line-height: 1;
 }
 
 h3 {

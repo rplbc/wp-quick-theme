@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 404 page
  *
@@ -9,10 +10,11 @@
 
 get_header(); ?>
 
-<section class="inner flex flex-col items-center gap-4 py-12">
-    <h1 class="text-center"><?php esc_html_e( 'Page not found', 'default' ); ?></h1>
-    <a href="/" class="btn"><?php esc_html_e( 'Homepage', 'default' ); ?></a>
+<section class="container flex flex-col items-center gap-4 py-12">
+    <h1 class="text-center"><?php esc_html_e('Page not found', 'default'); ?></h1>
+    <a href="/" class="rounded bg-indigo-600 px-4 py-2 font-semibold text-white">
+        <?php esc_html_e('Homepage', 'default'); ?>
+    </a>
 </section>
 
-<?php
-get_footer();
+<?php get_footer();

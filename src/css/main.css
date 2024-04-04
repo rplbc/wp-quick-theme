@@ -4,9 +4,6 @@
 @import './base.css';
 
 @import 'tailwindcss/components';
-@import './components/btn.css';
-@import './components/inner.css';
-@import './components/rich-content.css';
+@import './components/rich-text.css';
 
 @import 'tailwindcss/utilities';
-@import 'swiper/swiper.css';

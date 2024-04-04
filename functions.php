@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions and definitions
  *
@@ -7,14 +8,14 @@
  * @package Quick
  */
 
-require get_template_directory() . '/inc/cleanup.php';
+namespace Quick;
 
-require get_template_directory() . '/inc/setup.php';
+use Quick\Utils\FileLoader;
 
-require get_template_directory() . '/inc/editor/blocks.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-require get_template_directory() . '/inc/editor/wysiwyg.php';
+FileLoader::loadFiles(['inc/cleanup.php', 'inc/setup.php', 'inc/wysiwyg.php']);
 
-if ( file_exists( get_template_directory() . '/inc/dev-setup.php' ) ) {
-    require get_template_directory() . '/inc/dev-setup.php';
+if (file_exists(FileLoader::file('inc/dev-setup.php'))) {
+    FileLoader::loadFile('inc/dev-setup.php');
 }
