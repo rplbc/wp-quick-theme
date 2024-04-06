@@ -1,1 +1,1 @@
-console.log('main.ts')
+import './alpine'
