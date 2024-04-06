@@ -6,12 +6,6 @@
  * @package Quick
  */
 
-add_action('init', function () {
-    register_nav_menus([
-        'primary_menu' => __('Header Menu', 'quick'),
-    ]);
-});
-
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 
