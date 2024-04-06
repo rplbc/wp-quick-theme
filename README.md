@@ -1,6 +1,6 @@
 # Quick
 
-Quick is a minimal WordPress theme starter that provides a straightforward setup for building custom WordPress themes. It includes support for TypeScript and TailwindCSS.
+Quick is a minimal WordPress theme starter that provides a straightforward setup for building custom WordPress themes. It includes support for TypeScript, AlpineJS, and TailwindCSS.
 
 ## Usage
 
@@ -19,16 +19,16 @@ pnpm install
 composer install # stubs and PHP_CS
 ```
 
+### AlpineJS
+
+Use of [Alpine](https://github.com/alpinejs/alpine) is optional. By default, [focus](https://alpinejs.dev/plugins/focus) plugin is included. See _header.php_ and _src/ts/alpine_.
+
 ### Production
 
 Run `pnpm build` to generate the following:
 
-- `dist` folder with compiled styles, fonts, and JavaScript files,
+- `dist` folder with compiled styles, fonts, and JS files,
 - `.quick` folder containing all necessary files ready for export
-
-### AlpineJS
-
-Use of [Alpine](https://github.com/alpinejs/alpine) is optional. By default, I included [focus](https://alpinejs.dev/plugins/focus) plugin.
 
 ## Contributing
 

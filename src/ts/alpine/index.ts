@@ -1,9 +1,12 @@
 import Alpine from 'alpinejs'
-
 import focus from '@alpinejs/focus'
 
+/* Init plugins */
 Alpine.plugin(focus)
 
-window.Alpine = Alpine
+/* Add custom features */
+import './features'
 
+/* Start alpine */
+window.Alpine = Alpine
 Alpine.start()
