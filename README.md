@@ -26,6 +26,10 @@ Run `pnpm build` to generate the following:
 - `dist` folder with compiled styles, fonts, and JavaScript files,
 - `.quick` folder containing all necessary files ready for export
 
+### AlpineJS
+
+Use of [Alpine](https://github.com/alpinejs/alpine) is optional. By default, I included [focus](https://alpinejs.dev/plugins/focus) plugin.
+
 ## Contributing
 
 If you encounter any issues, have suggestions, or would like to contribute to this project, please open an issue or submit a pull request. Contributions are welcome and greatly appreciated!
