@@ -14,7 +14,7 @@ use Quick\Utils\FileLoader;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-FileLoader::loadFiles(['inc/cleanup.php', 'inc/setup.php', 'inc/wysiwyg.php']);
+FileLoader::loadFiles(['inc/setup.php']);
 
 if (file_exists(FileLoader::file('inc/dev-setup.php'))) {
     FileLoader::loadFile('inc/dev-setup.php');
