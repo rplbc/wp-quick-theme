@@ -21,28 +21,28 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="z-50 fixed left-0 top-0 w-full">
-        <div class="h-20 flex border-b border-b-gray-100 bg-white">
+    <header class="fixed left-0 top-0 z-50 w-full">
+        <div class="flex h-20 border-b border-b-gray-100 bg-white">
             <div class="container flex">
-                <h1 class="self-center text-2xl">
+                <h1 class="mr-auto self-center text-2xl">
                     <a href="<?php echo esc_url(home_url('/')); ?>">Quick</a>
                 </h1>
-                <nav class="ml-auto flex gap-8" aria-label="Main menu">
-                    <?php
-                    wp_nav_menu([
-                        'container' => '',
-                        'depth' => 1,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<ul class="flex items-center gap-[inherit]">%3$s</ul>',
-                        'theme_location' => 'primary_menu',
-                    ]);
-                    ?>
-                    <button class="self-center rounded bg-indigo-600 px-4 py-2 font-semibold text-white">
-                        Call to action
+                <div class="ml-auto flex items-center gap-8" x-data x-trap="$store.mobileNav.isOpen">
+                    <nav aria-label="Main menu" x-cloak x-data x-show="$store.mobileNav.isOpen">
+                        <ul class="flex items-center gap-5">
+                            <li><a href="#home" @click="$store.mobileNav.hide()">Home</a></li>
+                            <li><a href="#about" @click="$store.mobileNav.hide()">About</a></li>
+                        </ul>
+                    </nav>
+                    <button
+                        class="self-center rounded bg-indigo-600 px-6 py-2 font-semibold text-white aria-expanded:bg-blue-600"
+                        x-data :aria-expanded="$store.mobileNav.isOpen" aria-expanded="false"
+                        @click="$store.mobileNav.toggle()">
+                        Toggle
                     </button>
-                </nav>
+                </div>
             </div>
         </div>
     </header>
 
-    <main id="main" class="min-h-screen pt-[--headerHeight]">
+    <main id="main" class="pt-20">
