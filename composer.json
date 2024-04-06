@@ -1,6 +1,5 @@
 {
   "require-dev": {
-    "php-stubs/acf-pro-stubs": "^6.2",
     "php-stubs/wordpress-stubs": "^6.4",
     "squizlabs/php_codesniffer": "^3.9"
   },
