@@ -5,13 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@alpinejs/collapse':
-    specifier: ^3.13.8
-    version: 3.13.8
   '@alpinejs/focus':
-    specifier: ^3.13.8
-    version: 3.13.8
-  '@alpinejs/intersect':
     specifier: ^3.13.8
     version: 3.13.8
   '@fontsource-variable/inter':
@@ -28,13 +22,7 @@ devDependencies:
   '@types/alpinejs':
     specifier: ^3.13.10
     version: 3.13.10
-  '@types/alpinejs__collapse':
-    specifier: ^3.13.4
-    version: 3.13.4
   '@types/alpinejs__focus':
-    specifier: ^3.13.4
-    version: 3.13.4
-  '@types/alpinejs__intersect':
     specifier: ^3.13.4
     version: 3.13.4
   '@types/node':
@@ -134,19 +122,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@alpinejs/collapse@3.13.8:
-    resolution: {integrity: sha512-NsYiidTJ/AOFE8xUMxnXIe5LbRYcfw3UjxI6VUlDw3st4XwzaeCNyqBbZVRt9Ac7wfdrODy0qTHA+iCHSF0atQ==}
-    dev: false
-
   /@alpinejs/focus@3.13.8:
     resolution: {integrity: sha512-ioGVlcRsD/8qcMs0dHyuhcPvIFAkSjGhHNXW+0j6kaNh9RoNQHT+webmTShJEoPTyBfjmRr5BzB7lWbyfgYpNA==}
     dependencies:
       focus-trap: 6.9.4
       tabbable: 5.3.3
-    dev: false
-
-  /@alpinejs/intersect@3.13.8:
-    resolution: {integrity: sha512-f4z6owi/2+wIl2mgJzmwg6FXM4cY0Uhd4GVaDaCUJ14OsgXLGcdNeUWW17mAyspVPW7uhEXqLPNpK3a3UNwF/w==}
     dev: false
 
   /@babel/code-frame@7.22.5:
@@ -819,20 +799,8 @@ packages:
     resolution: {integrity: sha512-ah53tF6mWuuwerpDE7EHwbZErNDJQlsLISPqJhYj2RZ9nuTYbRknSkqebUd3igkhLIZKkPa7IiXjSn9qsU9O2w==}
     dev: true
 
-  /@types/alpinejs__collapse@3.13.4:
-    resolution: {integrity: sha512-kUBJWEDrHahD2Tb1lrir7iNTGN9ukvoJFjOY41EGC7F21E1KMSch5NrGgE0sqINrRT3lf1UZm3wxB3CNjJHBwg==}
-    dependencies:
-      '@types/alpinejs': 3.13.10
-    dev: true
-
   /@types/alpinejs__focus@3.13.4:
     resolution: {integrity: sha512-g7pQNxST7palODhfg6DJoKWS59pD8EK1wNjkJydBP2u8LntlO8oD4f2uj6Ywh2CL/olM/bPSyYxwr+WQQPlphg==}
-    dependencies:
-      '@types/alpinejs': 3.13.10
-    dev: true
-
-  /@types/alpinejs__intersect@3.13.4:
-    resolution: {integrity: sha512-yoX6WO7AleeULOQvPz7rrx7FJmu6l033bM7QiGcWyvZjqF2KIut99ByUZO6OWUQuYmbRjxsKthGiUYNaAywHiA==}
     dependencies:
       '@types/alpinejs': 3.13.10
     dev: true
