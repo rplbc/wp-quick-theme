@@ -12,6 +12,8 @@
 
 </main>
 
+<?php get_template_part('parts/core/footer'); ?>
+
 <?php wp_footer(); ?>
 
 </body>
