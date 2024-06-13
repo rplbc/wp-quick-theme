@@ -1,15 +1,12 @@
-import ESLintPlugin from 'eslint-webpack-plugin'
 import FileManagerPlugin from 'filemanager-webpack-plugin'
-import MiniCssExtractPlugin, {
-  loader as miniCSSLoader,
-} from 'mini-css-extract-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import path from 'path'
-import type { Configuration } from 'webpack'
 import 'webpack-dev-server'
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
-import config from './quick.config'
+import config from './quick.config.js'
 
-export default function (env = { WEBPACK_SERVE: false }): Configuration {
+/** @type {import('webpack).Configuration} */
+export default function (env = { WEBPACK_SERVE: false }) {
   const { WEBPACK_SERVE: isDev = false } = env
 
   return {
@@ -26,7 +23,7 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
     },
     output: {
       filename: 'js/[name].js',
-      path: path.resolve(__dirname, config.distDir),
+      path: path.resolve(import.meta.dirname, config.distDir),
       clean: true,
     },
     resolve: {
@@ -70,7 +67,7 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
           test: /\.css$/,
           exclude: /node_modules/,
           use: [
-            isDev ? 'style-loader' : miniCSSLoader,
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             'css-loader',
             'postcss-loader',
           ],
@@ -113,9 +110,6 @@ export default function (env = { WEBPACK_SERVE: false }): Configuration {
             }),
           ]
         : []),
-      new ESLintPlugin({
-        extensions: ['ts'],
-      }),
     ],
     cache: {
       type: 'filesystem',
