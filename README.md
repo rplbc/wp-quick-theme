@@ -16,11 +16,21 @@ The development process involves three main files:
 - **main.ts**: The main TypeScript file.
 - **main.css**: The main CSS file.
 
-To start the development server, run `pnpm dev`.
+To start the development server, run `pnpm dev`. Make sure to set `QUICK_ENVIRONMENT`:
+
+```php
+# functions.php
+define('QUICK_ENVIRONMENT', 'development');
+```
 
 ### Production
 
-Run `pnpm build` to generate `dist` folder with compiled styles, fonts, and JS files.
+Run `pnpm build` to generate `dist` folder with compiled styles and JS files. Make sure to set `QUICK_ENVIRONMENT`:
+
+```php
+# functions.php
+define('QUICK_ENVIRONMENT', 'production');
+```
 
 ### AlpineJS
 
