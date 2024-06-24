@@ -1,6 +1,6 @@
 # Quick
 
-Quick offers a smooth start for crafting custom WordPress themes. Backed by TypeScript, AlpineJS, and TailwindCSS support, it transforms theme development into a fluid journey.
+Quick helps you easily create custom WordPress themes using TypeScript, AlpineJS, and TailwindCSS.
 
 ## Quick start
 
@@ -8,28 +8,33 @@ Quick offers a smooth start for crafting custom WordPress themes. Backed by Type
 2. Install dependencies by running `pnpm install` and `composer install`.
 3. Generate the autoload file with `composer dump-autoload`.
 4. Activate the theme from the WP admin panel.
-5. Optionally, personalize settings in the _quick.config.ts_ file.
 
 ### Development
 
-The development process revolves around three core files:
+The development process involves three main files:
 
 - **main.ts**: The main TypeScript file.
-- **main.css**: The primary CSS file.
-- **editor.css**: Styles specifically for the editor (Note: This file does not support the reload feature).
+- **main.css**: The main CSS file.
 
-To initiate the development server, run `pnpm dev`. By default, the theme loads files from the dist folder. However, in development mode, it additionally loads an extra dev-setup.php file. This file dequeues main.ts and main.css, instead loading them from the development server.
+To start the development server, run `pnpm dev`. Make sure to set `QUICK_ENVIRONMENT`:
+
+```php
+# functions.php
+define('QUICK_ENVIRONMENT', 'development');
+```
 
 ### Production
 
-Run `pnpm build` to generate the following:
+Run `pnpm build` to generate `dist` folder with compiled styles and JS files. Make sure to set `QUICK_ENVIRONMENT`:
 
-- `dist` folder with compiled styles, fonts, and JS files,
-- `.quick` folder containing all necessary files ready for export
+```php
+# functions.php
+define('QUICK_ENVIRONMENT', 'production');
+```
 
 ### AlpineJS
 
-Use of [Alpine](https://github.com/alpinejs/alpine) is optional. By default, [focus](https://alpinejs.dev/plugins/focus) plugin is included. See _header.php_ and _src/ts/alpine_.
+Using [Alpine](https://github.com/alpinejs/alpine) is optional. By default, [focus](https://alpinejs.dev/plugins/focus) plugin is included. See _header.php_ and _src/ts/alpine_.
 
 ## Contributing
 
