@@ -1,9 +1,9 @@
-@import '@fontsource-variable/inter/index.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import 'tailwindcss/base';
-@import './base.css';
-
-@import 'tailwindcss/components';
-@import './components/rich-text.css';
-
-@import 'tailwindcss/utilities';
+@layer base {
+  [x-cloak] {
+    display: none !important;
+  }
+}

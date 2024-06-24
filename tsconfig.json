@@ -16,6 +16,6 @@
     "noEmit": true,
     "lib": ["es2022", "dom", "dom.iterable"]
   },
-  "include": ["webpack", "src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "vendor", ".quick"]
 }
