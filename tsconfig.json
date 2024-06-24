@@ -17,5 +17,5 @@
     "lib": ["es2022", "dom", "dom.iterable"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "vendor", ".quick"]
+  "exclude": ["node_modules", "vendor"]
 }
