@@ -10,9 +10,11 @@
 
 ?>
 
-</main>
+        </main>
 
-<?php get_template_part('parts/core/footer'); ?>
+    <?php get_template_part('parts/core/footer'); ?>
+
+    </div>
 
 <?php wp_footer(); ?>
 
