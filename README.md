@@ -34,7 +34,7 @@ define('QUICK_ENVIRONMENT', 'production');
 
 ### AlpineJS
 
-Using [Alpine](https://github.com/alpinejs/alpine) is optional. By default, [focus](https://alpinejs.dev/plugins/focus) plugin is included. See _header.php_ and _src/ts/alpine_.
+Using [Alpine](https://github.com/alpinejs/alpine) is optional.
 
 ## Contributing
 

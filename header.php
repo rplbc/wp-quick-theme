@@ -21,6 +21,8 @@
 <body <?php body_class('bg-gray-50 antialiased'); ?>>
     <?php wp_body_open(); ?>
 
+    <div class="min-h-screen flex flex-col">
+
     <?php get_template_part('parts/core/header') ?>
 
-    <main id="main" class="pt-20">
+        <main id="main" class="pt-20">
